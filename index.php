@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projeto Coude</title>
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <img src="./imagens/variedade-de-pessoas-multitasking-em-uma-cena-de-desenho-animado-3d22.png" alt="">
 </div>
       <div class="Div1">
-    <h2>Cadastrar <br>funcionário</h2>
+    <h2>Cadastrar<br>funcionário</h2>
     
    <form action="" method="post"> 
    <input type="text" name="nome" id="nome" placeholder="Nome"> <br><br>
