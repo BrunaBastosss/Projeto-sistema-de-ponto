@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<div class="container">
 <div class="img">
 <img src="./imagens/variedade-de-pessoas-multitasking-em-uma-cena-de-desenho-animado-3d22.png" alt="">
 </div>
@@ -27,6 +28,9 @@
       <input type="submit" value="Cadastrar">
     </form>
  </div>
+
+ </div>
+
     <script src="ler.js"></script>
     <script src="mask.js"></script>
     <script src="APIcep.js"></script>
