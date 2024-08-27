@@ -1,6 +1,99 @@
-body{
-    background-color: rgb(3, 3, 71);
+.tudo {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #cccccc00;
+    background-color: #f9f9f9d2;
+    border-radius: 25px;
+    display: flexbox;
+    margin: auto;
+    margin-top: 200px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    animation: normal 0.3s ease-in-out 0s 1 intro;
 }
-h1{
-    color: aliceblue;
+
+
+@keyframes intro {
+    0% {
+        transform: translateY(10%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+}}
+
+.campos_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nome_login {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#senha_login {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#email_login {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.botao {
+    background-color: #17006b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.titulo {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(11, 0, 58);
+}
+
+#rodape {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(16, 12, 12);
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+body {
+    background-color: rgb(3, 3, 71);
 }

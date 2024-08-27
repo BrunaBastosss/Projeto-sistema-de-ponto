@@ -23,7 +23,7 @@ $result = $conex ->prepare($sql);
 $result -> bindParam(':nome', $nome);
 $result -> bindParam(':email', $email);
 $result -> bindParam(':senha', $senha);
-$result -> bindParam('data_hora', $data_hora);
+$result -> bindParam(':data_hora', $data_hora);
 $result -> bindParam(':cpf', $cpf);
 $result -> bindParam(':cep', $cep);
 $result -> bindParam(':logradouro', $logradouro);
@@ -37,7 +37,6 @@ $response ['data'] = [
  'nome' => $nome,
  'email' => $email,
  'senha' => $senha,
- 'nome' => $nome,
  'cpf' => $cpf,
  'data_hora' => $data_hora,
  'cep' => $cep,
@@ -47,7 +46,25 @@ $response ['data'] = [
  'estado' => $estado
 ];
 
+$response = [];
+
+$data_e_hora = $_POST['data_e_hora'];
+$tipo = $_POST['tipo'];
+
+$sql = "INSERT INTO ponto (data_e_hora, tipo) VALUES (:data_e_hora, :tipo)";
+$result = $conex ->prepare($sql);
+$result-> bindParam(':data_e_hora', $data_e_hora);
+$result-> bindParam(':tipo', $tipo);
+
+$response['data'] = [
+ 'data_e_hora' => $data_e_hora,
+ 'tipo' => $tipo
+];
+
 echo json_encode($response, JSON_PRETTY_PRINT)
+
+
+
+
  ?>
  
- <?php 
