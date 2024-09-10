@@ -1,6 +1,6 @@
 <?php 
-header('Content-Type application/json');
-$conex = new pdo('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
+header('Content-Type: application/json');
+$conex = new PDO('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
 
 $response = [];
 
@@ -33,7 +33,7 @@ $result -> bindParam(':estado', $estado);
 
 $result-> execute();
 
-$response ['data'] = [
+$response ['pessoa'] = [
  'nome' => $nome,
  'email' => $email,
  'senha' => $senha,
@@ -51,20 +51,18 @@ $response = [];
 $data_e_hora = $_POST['data_e_hora'];
 $tipo = $_POST['tipo'];
 
-$sql = "INSERT INTO ponto (data_e_hora, tipo) VALUES (:data_e_hora, :tipo)";
+$sql = "INSERT INTO ponto (id, data_e_hora, tipo) VALUES (:id, :data_e_hora, :tipo)";
 $result = $conex ->prepare($sql);
+$result-> bindParam('id', $id);
 $result-> bindParam(':data_e_hora', $data_e_hora);
 $result-> bindParam(':tipo', $tipo);
 
-$response['data'] = [
+$response['ponto'] = [
+ 'id' => $id,
  'data_e_hora' => $data_e_hora,
  'tipo' => $tipo
 ];
 
 echo json_encode($response, JSON_PRETTY_PRINT)
 
-
-
-
  ?>
- 

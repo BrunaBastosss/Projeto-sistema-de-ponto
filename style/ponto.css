@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+h1 {
+    text-align: center;
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px;
+}
+
+
+thead td {
+    background-color: rgb(11, 0, 58);
+    color: white; 
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; 
+}
+
+.botao{
+margin-left: 29%;
+}
+
+input[type="submit"]{
+    border: none;
+    padding: 20px;
+    width: 250px;
+    background-color: rgb(11, 0, 58);
+    border-radius: 30px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+input[type="submit"]:hover{
+cursor: pointer;
+background-color: blue;
+}
+.divdatetime{
+    margin-left: 210px;
+}
