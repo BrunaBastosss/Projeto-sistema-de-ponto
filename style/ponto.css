@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif; 
     margin: 0;
@@ -49,9 +50,27 @@ td {
     border-bottom: 1px solid #ddd; 
 }
 
-.botao{
-margin-left: 29%;
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.tipo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 180px;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.botao{
+margin-left: 151px;
+margin-top: -20px;
+
+}
+
 
 input[type="submit"]{
     border: none;
@@ -66,6 +85,7 @@ input[type="submit"]:hover{
 cursor: pointer;
 background-color: blue;
 }
+
 .divdatetime{
-    margin-left: 210px;
+    margin-left: 198px;
 }

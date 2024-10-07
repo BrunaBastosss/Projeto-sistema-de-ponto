@@ -1,5 +1,7 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +11,7 @@
 <body>
     <div class="tudo">
         <h1 class="titulo">Login</h1>
-        <form action="" method="POST" class="campos_login">
+        <form action="session.php" method="POST" class="campos_login">
             <input id="email_login" type="email" placeholder="Email" name="email">
             <input id="senha_login" type="password" placeholder="Senha" name="senha">
             <input class="botao" type="submit" value="Entrar">

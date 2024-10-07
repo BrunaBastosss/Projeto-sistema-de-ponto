@@ -1,10 +1,19 @@
+<?php
+session_start();
+if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
+    header('Location: index.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Coude</title>
     <link rel="stylesheet" href="./style/index.css">
+    
 </head>
 <body>
 
@@ -25,6 +34,7 @@
       <input type="text" placeholder="Bairro" id="bairro" name="bairro">
       <input type="text" placeholder="Cidade" id="cidade" name="cidade"><br><br>
       <input type="text" placeholder="Estado" id="estado" name="estado">
+      <input type="text" placeholder="ID" id="nivel_id" name="nivel_id">
       <input type="submit" value="Cadastrar">
     </form>
  </div>
@@ -36,4 +46,3 @@
     <script src="APIcep.js"></script>
 </body>
 </html>
-

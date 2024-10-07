@@ -13,11 +13,14 @@ create table pessoas(
  bairro varchar(20),
  cidade varchar (25),
  estado varchar(20)
+ nivel_id int,
+ FOREIGN KEY (nivel_id) REFERENCES nivel(id)
+ 
 );
 create table ponto(
 id int primary key auto_increment not null,
 id_funcionario int,
-data_e_hora datetime,
+data_e_hora datetime current_timestamp,
 tipo enum('entrada', 'saida'),
 foreign key (id_funcionario) references pessoas(id)
 );

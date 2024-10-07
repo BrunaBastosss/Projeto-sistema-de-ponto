@@ -1,6 +1,7 @@
-<?php 
+<?php
 header('Content-Type: application/json');
-$conex = new PDO('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
+// $conex = new PDO('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
+require('conex.php');
 
 $response = [];
 
@@ -14,10 +15,10 @@ $logradouro = $_POST['logradouro'];
 $bairro = $_POST['bairro'];
 $cidade = $_POST['cidade'];
 $estado = $_POST ['estado'];
+$nivel_id = $_POST['nivel_id'];
 
 
-
-$sql = "INSERT INTO pessoas (nome, email, senha, data_hora, cpf, cep, logradouro, bairro, cidade, estado) VALUES (:nome, :email, :senha, :data_hora, :cpf, :cep, :logradouro, :bairro, :cidade, :estado)";
+$sql = "INSERT INTO pessoas (nome, email, senha, data_hora, cpf, cep, logradouro, bairro, cidade, estado, nivel_id) VALUES (:nome, :email, :senha, :data_hora, :cpf, :cep, :logradouro, :bairro, :cidade, :estado, :nivel_id)";
 
 $result = $conex ->prepare($sql);
 $result -> bindParam(':nome', $nome);
@@ -30,10 +31,12 @@ $result -> bindParam(':logradouro', $logradouro);
 $result -> bindParam(':bairro', $bairro);
 $result -> bindParam(':cidade', $cidade);
 $result -> bindParam(':estado', $estado);
+$result -> bindParam(':nivel_id', $nivel_id);
+
 
 $result-> execute();
 
-$response ['pessoa'] = [
+$response ['pessoas'] = [
  'nome' => $nome,
  'email' => $email,
  'senha' => $senha,
@@ -43,26 +46,9 @@ $response ['pessoa'] = [
  'logradouro' => $logradouro,
  'bairro' => $bairro,
  'cidade' => $cidade,
- 'estado' => $estado
+ 'estado' => $estado,
+ 'nivel_id' => $nivel_id
 ];
 
-$response = [];
 
-$data_e_hora = $_POST['data_e_hora'];
-$tipo = $_POST['tipo'];
-
-$sql = "INSERT INTO ponto (id, data_e_hora, tipo) VALUES (:id, :data_e_hora, :tipo)";
-$result = $conex ->prepare($sql);
-$result-> bindParam('id', $id);
-$result-> bindParam(':data_e_hora', $data_e_hora);
-$result-> bindParam(':tipo', $tipo);
-
-$response['ponto'] = [
- 'id' => $id,
- 'data_e_hora' => $data_e_hora,
- 'tipo' => $tipo
-];
-
-echo json_encode($response, JSON_PRETTY_PRINT)
-
- ?>
+?>

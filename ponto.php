@@ -1,22 +1,44 @@
+<?php
+session_start();
+if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 1) {
+    header('Location: index.php');
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto</title>
     <link rel="stylesheet" href="./style/ponto.css">
+
 </head>
 <body>
-<div class="container">
-    <h1>Registrar ponto</h1>
-     <div class="botao">
-    <input type="submit" value="Registrar">
-    </div>
-    <div class="divdatetime">
-<p id="horario"> <?php echo date("d/m/Y H:i:s");  ?> </p>
-   </div>
 
+
+
+<div class="container">
+    <h1>Registrar ponto</h1><br><br>
+ <form id="formponto">
+  <div class="tipo">
+      <label for="entrada"><strong>Entrada</strong></label>  
+      <input type="radio" id="entrada" name="tipo" value="entrada">
+       <label for="saida"><strong>Saída</strong></label>
+       <input type="radio" id="saida" name="tipo" value="saida"><br><br>
     </div>
+    <div class="botao">
+           <input type="submit" value="Registrar">
+    </div>
+ </form>
+
+    <div class="divdatetime">
+        <p id="horario"> <?php echo date("d/m/Y H:i:s");  ?> </p>
+    </div>
+    
+</div>
     <table id="tabelas">
         <thead>
             <tr>
@@ -46,6 +68,7 @@
 </html>
 
 <?php
+
 // require_once('receber.php');
 // try {
 //     $conex = new PDO('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
@@ -65,6 +88,3 @@
 // echo json_encode($response, JSON_PRETTY_PRINT);
 
 ?>
-
-
-
