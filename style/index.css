@@ -56,3 +56,13 @@ h2 {
     color: black;
     text-align: center; 
 }
+.botao{
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+   
+    
+}

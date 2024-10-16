@@ -15,7 +15,7 @@ if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
 </head>
 <body>
 <a href="cadastro.php" class="botao">Cadastro</a>
-    <h1>Lista de funcionários</h1>
+    <h1>Ponto dos funcionários</h1>
     <table>
         <thead>
             <tr>
