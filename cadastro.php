@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
+if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 1) {
     header('Location: index.php');
     exit;
 }
@@ -17,10 +17,10 @@ if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
     
 </head>
 <body>
-    <a href="adm2.php" class="botao">Voltar</a>
+   
     
      <div class="container">
-        
+
    <div class="img">
      <img src="./imagens/variedade-de-pessoas-multitasking-em-uma-cena-de-desenho-animado-3d22.png" alt="">
    </div>
@@ -40,6 +40,8 @@ if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
       <input type="text" placeholder="ID" id="nivel_id" name="nivel_id">
       <input type="submit" value="Cadastrar">
     </form>
+        <a href="logout.php" class="botao">Sair</a>
+        <a href="adm2.php" class="botao">Voltar</a>
  </div>
     </div>
 

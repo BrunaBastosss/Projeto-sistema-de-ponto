@@ -7,7 +7,7 @@ create table pessoas(
  email varchar(100) unique not null,
  senha varchar (50),
  data_hora datetime,
- cpf varchar(11) unique not null,
+ cpf varchar(14) unique not null,
  cep varchar(11),
  logradouro varchar(40),
  bairro varchar(20),

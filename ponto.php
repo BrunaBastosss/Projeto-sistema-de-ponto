@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 1) {
+if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
     header('Location: index.php');
     exit;
 }
@@ -30,15 +30,13 @@ if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 1) {
        <input type="radio" id="saida" name="tipo" value="saida"><br><br>
     </div>
     <div class="botao">
-           <input type="submit" value="Registrar">
+        <input type="submit" value="Registrar">
     </div>
  </form>
 
     <div class="divdatetime">
         <p id="horario"> <?php echo date("d/m/Y H:i:s");  ?> </p>
     </div>
-    
-</div>
     <table id="tabelas">
         <thead>
             <tr>
@@ -47,12 +45,16 @@ if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 1) {
                 <td>Tipo</td>
             </tr>
         </thead>
-        <tbody>
-
-        </tbody>
-    </table>
-    
-
+        <tbody>    
+            </tbody>
+        </table>
+        
+        <div class="rodape">
+            <a href="logout.php" class="sair">Sair</a>
+        </div>
+        
+        
+    </div>
 <script>
  function atualizarHR(){
  var data = new Date().toLocaleString("pt-br", {

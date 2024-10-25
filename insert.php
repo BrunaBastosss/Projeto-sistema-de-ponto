@@ -1,6 +1,6 @@
 <?php
-session_start(); 
 header('Content-Type: application/json');
+session_start(); 
 $conex = new PDO('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
 
 $response = [];

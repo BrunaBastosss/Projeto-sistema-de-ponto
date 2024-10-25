@@ -22,16 +22,15 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
      $_SESSION['nivel_id'] = $usuario['nivel_id']; 
 
      
-        if ($usuario['nivel_id'] == 1) {
-            header('Location: ponto.php');
-        } elseif ($usuario['nivel_id'] == 2) {
-            header('Location: adm2.php');
-        }
-        exit;
-    } else {
-        echo "E-mail ou senha incorretos!";
+     if ($usuario['nivel_id'] == 1) {
+        header('Location: adm2.php');
+    } elseif ($usuario['nivel_id'] == 2) {
+       header('Location: ponto.php'); 
     }
+    exit;
+} else {
+    echo "E-mail ou senha incorretos!";
 }
-
+}
 
 ?>

@@ -1,9 +1,13 @@
 <?php
 
-// require ('receber.php'); 
-$conex = new PDO ('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
+require ('conex.php'); 
+session_start();
+// $conex = new PDO ('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
 
-$sql = "SELECT * FROM ponto";
+
+
+$id_usuario = $_SESSION['id'];
+$sql = "SELECT * FROM ponto WHERE id_funcionario = $id_usuario";
 $stmt = $conex->query($sql);
 $consulta = $stmt-> fetchAll(PDO::FETCH_ASSOC);
 

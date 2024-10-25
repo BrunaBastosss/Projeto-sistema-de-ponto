@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
+if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 1) {
     header('Location: index.php');
     exit;
 }
