@@ -45,6 +45,16 @@ td:first-child {
     
 }
 
+.boton{
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+
+}
+
 @media (max-width: 600px) {
     td {
         display: block;

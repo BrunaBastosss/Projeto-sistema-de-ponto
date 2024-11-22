@@ -14,7 +14,8 @@ if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 1) {
     <link rel="stylesheet" href="./style/adm.css">
 </head>
 <body>
-<a href="cadastro.php" class="botao">Cadastro</a>
+<a href="cadastro.php" class="botao">Cadastro</a> <br><br><br>
+<a href="lista_funcionarios.php" class="boton">Lista de funcionários</a>
     <h1>Ponto dos funcionários</h1>
     <table>
         <thead>

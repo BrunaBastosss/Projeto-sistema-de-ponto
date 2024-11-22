@@ -18,12 +18,15 @@ if (!isset($_SESSION['id']) || $_SESSION['nivel_id'] != 2) {
 </head>
 <body>
 
-
-
-<div class="container">
-    <h1>Registrar ponto</h1><br><br>
- <form id="formponto">
-  <div class="tipo">
+    <div class="usuario">
+    <?php echo "Usuário: " . $_SESSION['nome']; ?>
+    </div>
+    
+    
+    <div class="container">
+        <h1>Registrar ponto</h1><br><br>
+        <form id="formponto">
+    <div class="tipo">
       <label for="entrada"><strong>Entrada</strong></label>  
       <input type="radio" id="entrada" name="tipo" value="entrada">
        <label for="saida"><strong>Saída</strong></label>
