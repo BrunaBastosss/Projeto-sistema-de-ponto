@@ -109,12 +109,12 @@ margin-top: -20px;
 
 .usuario {
     margin-top: 96px;
-    background-color: rgb(11, 0, 58);  /* Azul escuro */
-    color: #ffffff;             /* Texto branco */
-    font-size: 1.2em;           /* Tamanho do texto */
-    font-weight: bold;          /* Negrito para destaque */
-    padding: 10px 20px;         /* Espaçamento dentro da caixa */
-    border-radius: 8px;         /* Borda arredondada */
-    display: inline-block;      /* Mantém o tamanho ajustado ao conteúdo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    background-color: rgb(11, 0, 58); 
+    color: #ffffff;             
+    font-size: 1.2em;           
+    font-weight: bold;          
+    padding: 10px 20px;        
+    border-radius: 8px;       
+    display: inline-block;      
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
