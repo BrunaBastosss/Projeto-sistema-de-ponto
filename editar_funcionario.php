@@ -1,8 +1,8 @@
 <?php
 include 'conex.php';
 
-if (isset($_POST['id'])) {
-    $id = $_POST['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     
     $sql = "SELECT * FROM pessoas WHERE id = :id";
     $stmt = $conex->prepare($sql);
@@ -23,8 +23,7 @@ if (isset($_POST['id'])) {
       
 
         
-        $sql = "UPDATE pessoas SET nome = :nome, email = :email, cpf = :cpf, cep = :cep, logradouro = :logradouro, bairro = :bairro, cidade = :cidade, estado = :estado, nivel_id = :nivel_id WHERE id = :id";
-        $stmt = $conex->prepare($sql);
+        $sql = "UPDATE pessoas SET nome = :nome, email = :email, cpf = :cpf, cep = :cep, logradouro = :logradouro, bairro = :bairro, cidade = :cidade, estado = :estado WHERE id = :id";        $stmt = $conex->prepare($sql);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':cpf', $cpf);

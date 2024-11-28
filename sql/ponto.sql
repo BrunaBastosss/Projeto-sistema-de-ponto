@@ -8,7 +8,7 @@ create table pessoas(
  senha varchar (50),
  data_hora datetime,
  cpf varchar(14) unique not null,
- cep varchar(11),
+ cep varchar(11),q  
  logradouro varchar(40),
  bairro varchar(20),
  cidade varchar (25),

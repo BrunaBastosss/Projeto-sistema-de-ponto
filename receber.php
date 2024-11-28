@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: application/json');
-// $conex = new PDO('mysql:host=localhost;dbname=sistema_ponto', 'root', '');
 require('conex.php');
 
 $response = [];
