@@ -20,6 +20,7 @@ Este é o meu **primeiro projeto** para treinar minhas habilidades em desenvolvi
 ## Objetivo do Projeto
 
 Este projeto tem como objetivo melhorar minhas habilidades em desenvolvimento back-end, especialmente com **PHP** e **MySQL**, abordando questões de autenticação e gerenciamento de dados. Através desse sistema simples, busco entender as boas práticas de construção de sistemas e como manter a organização e a segurança de informações.
+(Os dados utilizados para cadastro de funcionários são meramente ilustrativos.)
 
 ## Melhorias Futuras
 
